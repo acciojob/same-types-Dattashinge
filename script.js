@@ -1,11 +1,13 @@
 function isSameType(value1, value2) {
   //your js code here
-    if (Number.isNaN(value1) && Number.isNaN(value2)) {
+  if (value1 === "NaN" && value2 === "NaN") {
         return true;
     }
 
-    return typeof value1 === typeof value2;
-}
+    const type1 = isNaN(value1) ? "string" : "number";
+    const type2 = isNaN(value2) ? "string" : "number";
+
+    return type1 === type2;
 
 // do not change the code below.
 let value1 = prompt("Enter Start of the Range.");
